@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogging Homepage</title>
+  <style>
+    /* Reset default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Container that centers content and sets a maximum width */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header section styling */
+    header {
+      background: #007a7d; /* dark teal color */
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Navigation container in the header */
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #e0e0e0;
+    }
+
+    /* Header content: main title and subtitle */
+    .header-content {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .header-content h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .header-content p {
+      font-size: 1.2em;
+    }
+
+    /* SVG wave effect at the bottom of the header */
+    header svg {
+      display: block;
+      width: 100%;
+      height: 80px;
+    }
+
+    /* Posts section */
+    .posts {
+      padding: 40px 0;
+    }
+
+    .posts h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    /* Grid layout for blog post previews */
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* Individual post card */
+    .post {
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .post-content {
+      padding: 15px;
+      flex-grow: 1;
+    }
+
+    .post-category {
+      font-size: 0.9em;
+      color: #007a7d;
+      margin-bottom: 5px;
+    }
+
+    .post-title {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+
+    .post-description {
+      font-size: 1em;
+      color: #666;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .header-content h1 {
+        font-size: 2.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">Blogging</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-content">
+      <h1>Welcome to My Blog</h1>
+      <p>Explore the latest posts and insights</p>
+    </div>
+    <!-- SVG wave effect -->
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="#f5f5f5" d="M0,32L48,26.7C96,21,192,11,288,16C384,21,480,43,576,53.3C672,64,768,64,864,58.7C960,53,1056,43,1152,48C1248,53,1344,75,1392,85.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+    </svg>
+  </header>
+
+  <!-- Blog Posts Section -->
+  <section class="posts container">
+    <h2>Recent Posts</h2>
+    <div class="post-grid">
+      <!-- Post 1: Technology -->
+      <div class="post">
+        <img src="https://media.istockphoto.com/id/2175894329/photo/hotel-service-management-system-concept-digital-network-business-investment-technology.webp?a=1&b=1&s=612x612&w=0&k=20&c=kKWPKhNW9bVQzR4ddiatTNdlJDLNxz2I9pyWjVviyZo=" alt="Technology">
+        <div class="post-content">
+          <div class="post-category">Technology</div>
+          <div class="post-title">Innovations in AI</div>
+          <div class="post-description">
+            Discover the latest advancements in artificial intelligence and their impact on our daily lives.
+          </div>
+        </div>
+      </div>
+      <!-- Post 2: Travel -->
+      <div class="post">
+        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dHJhdmVsfGVufDB8fDB8fHww" alt="Travel">
+        <div class="post-content">
+          <div class="post-category">Travel</div>
+          <div class="post-title">Journey Through the Alps</div>
+          <div class="post-description">
+            Experience the breathtaking beauty of the mountains and the diverse cultures flourishing there.
+          </div>
+        </div>
+      </div>
+      <!-- Post 3: Lifestyle -->
+      <div class="post">
+        <img src="https://plus.unsplash.com/premium_photo-1664360971698-0c07d3551bed?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGxpZmVzdHlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Lifestyle">
+        <div class="post-content">
+          <div class="post-category">Lifestyle</div>
+          <div class="post-title">Healthy Living Tips</div>
+          <div class="post-description">
+            Learn simple ways to maintain a healthy lifestyle through diet, exercise, and mindfulness.
+          </div>
+        </div>
+      </div>
+      <!-- Post 4: Food -->
+      <div class="post">
+        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZvb2R8ZW58MHx8MHx8fDA%3D" alt="Food">
+        <div class="post-content">
+          <div class="post-category">Food</div>
+          <div class="post-title">Gourmet Recipes</div>
+          <div class="post-description">
+            Explore a variety of gourmet recipes that bring a fusion of flavors to your kitchen.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
