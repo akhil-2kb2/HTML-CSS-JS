@@ -38,3 +38,4 @@ function update() {
         next.disabled = false;
     }
 }
+// Initial call to update the UI
