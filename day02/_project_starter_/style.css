@@ -83,6 +83,7 @@ body{
 } 
 .btn:focus{
     outline: 0;
+    
 }
 .btn:disabled{
     background-color: var(--line-border-empty);
